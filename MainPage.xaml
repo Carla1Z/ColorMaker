@@ -10,7 +10,7 @@
         <Color x:Key="Tertiary">#ab0e45</Color>
     </ContentPage.Resources>
 
-    <Grid x:Name="Contaier" BackgroundColor="Black">
+    <Grid x:Name="Container" BackgroundColor="Black">
         <Frame Margin="10,0,10,0" VerticalOptions="Center">
             <VerticalStackLayout Spacing="15" VerticalOptions="Center">
                 <Label
@@ -23,19 +23,24 @@
                     x:Name="sldRed"
                     MaximumTrackColor="{StaticResource Primary}"
                     MinimumTrackColor="{StaticResource Secondary}"
-                    ThumbColor="{StaticResource Tertiary}" />
+                    ThumbColor="{StaticResource Tertiary}"
+                    ValueChanged="Slider_ValueChanged" />
                 <Label Text="Verde:" />
                 <Slider
                     x:Name="sldGreen"
                     MaximumTrackColor="{StaticResource Primary}"
                     MinimumTrackColor="{StaticResource Secondary}"
-                    ThumbColor="{StaticResource Tertiary}" />
+                    ThumbColor="{StaticResource Tertiary}"
+                    ValueChanged="Slider_ValueChanged" 
+                    />
                 <Label Text="Azul:" />
                 <Slider
                     x:Name="sldBlue"
                     MaximumTrackColor="{StaticResource Primary}"
                     MinimumTrackColor="{StaticResource Secondary}"
-                    ThumbColor="{StaticResource Tertiary}" />
+                    ThumbColor="{StaticResource Tertiary}"
+                    ValueChanged="Slider_ValueChanged" 
+                    />
                 <Frame CornerRadius="25" HorizontalOptions="Center">
                     <HorizontalStackLayout>
                         <Label
