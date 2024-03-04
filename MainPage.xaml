@@ -59,7 +59,9 @@
                 <Button
                     x:Name="btnRandom"
                     BackgroundColor="{StaticResource Tertiary}"
-                    Text="Generar color aleatorio" />
+                    Text="Generar color aleatorio"
+                    Clicked="btnRandom_Clicked"
+                    />
             </VerticalStackLayout>
         </Frame>
     </Grid>
