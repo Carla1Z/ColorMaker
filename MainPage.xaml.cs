@@ -5,7 +5,7 @@ namespace ColorMaker;
 public partial class MainPage : ContentPage
 {
     bool isRandom;
-    int count = 0;
+    string hexValue;
 
     public MainPage()
     {
@@ -29,7 +29,8 @@ public partial class MainPage : ContentPage
     {
         btnRandom.BackgroundColor = color;
         Container.BackgroundColor = color;
-        lblHex.Text = color.ToHex();
+        hexValue = color.ToHex();
+        lblHex.Text = hexValue;
     }
 
     private void btnRandom_Clicked(object sender, EventArgs e)
@@ -47,6 +48,13 @@ public partial class MainPage : ContentPage
         sldGreen.Value = color.Green;
         sldBlue.Value = color.Blue;
         isRandom = false;
+    }
+
+    private async void ImageButton_Clicked(object sender, EventArgs e)
+    {
+        await Clipboard.SetTextAsync(hexValue);
+        var toast = CommunityToolkit.Maui.Alerts.Toast.Make("Color copiado", CommunityToolkit.Maui.Core.ToastDuration.Short, 12);
+        await toast.Show();
     }
 }
 
