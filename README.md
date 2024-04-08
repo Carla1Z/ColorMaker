@@ -12,7 +12,7 @@ ColorMaker es una aplicación desarrollada con .NET MAUI que te permite crear y 
 
 1. Clona el repositorio a tu máquina local.
    ```bash
-   git clone https://github.com/tu-usuario/ColorMaker.git
+   git clone https://github.com/Carla1Z/ColorMaker.git
 2. Abre la aplicación en tu entorno de desarrollo.
 
 3. Ajusta los controles deslizantes para cambiar el color de fondo según tus preferencias.
